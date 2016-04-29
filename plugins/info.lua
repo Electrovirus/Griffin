@@ -1,22 +1,2 @@
-function run(msg, matches)
- info = "full name: "..msg.from.print_name
- .."🔰first name: "..msg.from.first_name
- .."🔰last name: "..msg.from.last_name
- .."🔰user name: "..msg.from.username
- .."🔰telegram id: "..msg.from.id
- .."🔰group name: "..msg.to.print_name
- .."🔰group id: "..msg.to.id
- return info
-end
 
-return {
- description = "user information",
- usage = {
-  "!info : return your information",
-  "/info : return your information",
- },
- patterns = { 
-  "^[/!#]info$",
- },
- run = run,
-}
+#addplug do function run(msg, matches) local reply_id = msg['id'] local info = '⚠Name : '..msg.from.first_name..'\n\n' ..'🔰Id : '..msg.from.id..'\n' ..'🔰Username : @'..msg.from.username..'\n\n' ..'🔰Group Id : '..msg.to.id..'\n' ..'🔰Group name : '..msg.to.title reply_msg(reply_id, info, ok_cb, false) end return { patterns = { "^[!/#]info" }, run = run } end info
