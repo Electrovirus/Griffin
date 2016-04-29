@@ -152,7 +152,7 @@ end
 return {
   patterns = {
     "^[!/#](whois)$",
-    "^[!/#](id)$",
+    "^[Ii](d)$",
     "^[!/#]ids? (chat)$",
     "^[!/#]ids? (channel)$",
     "^[!/#](whois) (.*)$"
