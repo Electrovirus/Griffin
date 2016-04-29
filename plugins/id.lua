@@ -34,9 +34,9 @@ local function whoisname(cb_extra, success, result)
     user_id = result.peer_id
     user_username = result.username
     if chat_type == 'chat' then
-        send_msg('chat#id'..chat_id, '👤 '..lang_text(chat_id, 'user')..' @'..user_username..' ('..user_id..')', ok_cb, false)
+        send_msg('chat#id'..chat_id, '🔰 '..lang_text(chat_id, 'user')..' @'..user_username..' ('..user_id..')', ok_cb, false)
     elseif chat_type == 'channel' then
-        send_msg('channel#id'..chat_id, '👤 '..lang_text(chat_id, 'user')..' @'..user_username..' ('..user_id..')', ok_cb, false)
+        send_msg('channel#id'..chat_id, '🔰 '..lang_text(chat_id, 'user')..' @'..user_username..' ('..user_id..')', ok_cb, false)
     end
 end
 
@@ -44,9 +44,9 @@ local function whoisid(cb_extra, success, result)
     chat_id = cb_extra.chat_id
     user_id = cb_extra.user_id
     if cb_extra.chat_type == 'chat' then
-        send_msg('chat#id'..chat_id, '👤 '..lang_text(chat_id, 'user')..' @'..result.username..' ('..user_id..')', ok_cb, false)
+        send_msg('chat#id'..chat_id, '🔰 '..lang_text(chat_id, 'user')..' @'..result.username..' ('..user_id..')', ok_cb, false)
     elseif cb_extra.chat_type == 'channel' then
-        send_msg('channel#id'..chat_id, '👤 '..lang_text(chat_id, 'user')..' @'..result.username..' ('..user_id..')', ok_cb, false)
+        send_msg('channel#id'..chat_id, '🔰 '..lang_text(chat_id, 'user')..' @'..result.username..' ('..user_id..')', ok_cb, false)
     end
 end
 
@@ -69,9 +69,9 @@ local function get_id_who(extra, success, result)
     local chat = msg.to.id
     local user = msg.from.id
     if msg.to.type == 'chat' then
-        send_msg('chat#id'..msg.to.id, '🆔 '..lang_text(chat, 'user')..' ID: '..msg.from.id, ok_cb, false)
+        send_msg('chat#id'..msg.to.id, '🔰 '..lang_text(chat, 'user')..' ID: '..msg.from.id, ok_cb, false)
     elseif msg.to.type == 'channel' then
-        send_msg('channel#id'..msg.to.id, '🆔 '..lang_text(chat, 'user')..' ID: '..msg.from.id, ok_cb, false)
+        send_msg('channel#id'..msg.to.id, '🔰 '..lang_text(chat, 'user')..' ID: '..msg.from.id, ok_cb, false)
     end
 end
 
@@ -96,9 +96,9 @@ local function run(msg, matches)
     if matches[1] == "id" then
         if permissions(msg.from.id, msg.to.id, "id") then
             if msg.to.type == 'channel' then
-                send_msg(msg.to.peer_id, '🔠 '..lang_text(chat, 'supergroupName')..': '..msg.to.print_name:gsub("_", " ")..'\n👥 '..lang_text(chat, 'supergroup')..' ID: '..msg.to.id..'\n🆔 '..lang_text(chat, 'user')..' ID: '..msg.from.id, ok_cb, false)
+                send_msg(msg.to.peer_id, '🔰 '..lang_text(chat, 'supergroupName')..': '..msg.to.print_name:gsub("_", " ")..'\n🔰 '..lang_text(chat, 'supergroup')..' ID: '..msg.to.id..'\n🔰 '..lang_text(chat, 'user')..' ID: '..msg.from.id, ok_cb, false)
             elseif msg.to.type == 'chat' then
-                send_msg(msg.to.peer_id, '🔠 '..lang_text(chat, 'chatName')..': '..msg.to.print_name:gsub("_", " ")..'\n👥 '..lang_text(chat, 'chat')..' ID: '..msg.to.id..'\n🆔 '..lang_text(chat, 'user')..' ID: '..msg.from.id, ok_cb, false)
+                send_msg(msg.to.peer_id, ' '..lang_text(chat, 'chatName')..': '..msg.to.print_name:gsub("_", " ")..'\n🔰 '..lang_text(chat, 'chat')..' ID: '..msg.to.id..'\n🔰 '..lang_text(chat, 'user')..' ID: '..msg.from.id, ok_cb, false)
             end
         end
     elseif matches[1] == 'whois' then
