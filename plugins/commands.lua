@@ -58,8 +58,8 @@ do
 
     return {
         patterns = {
-            "^[!/#](clist)$",
-            "^[!/#](clist) (.+)"
+            "^[!/#](commands)$",
+            "^[!/#](commands) (.+)"
         }, 
         run = run 
     }
