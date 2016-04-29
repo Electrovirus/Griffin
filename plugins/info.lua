@@ -6,7 +6,6 @@ function run(msg, matches)
  .."🔰telegram id: "..msg.from.id
  .."🔰group name: "..msg.to.print_name
  .."🔰group id: "..msg.to.id
- .."🔰Phone No.:"..msg.from.phone
  return info
 end
 
