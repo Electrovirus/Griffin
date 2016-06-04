@@ -1,7 +1,9 @@
-DBTeam-bot
+A simple edit on dbteam bot by @Electrovirus
 ============
 
-A Telegram Bot based on plugins using [tg](https://github.com/vysheng/tg).
+
+dbteam:A telegram bot based on lua developed by dbteam
+
 
 Bot Commands
 ------------
