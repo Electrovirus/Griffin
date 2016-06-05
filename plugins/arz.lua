@@ -20,7 +20,7 @@ return {
   description = "arz in now", 
   usage = "arz",
   patterns = {
-    "^[!/#](arz)$"
+    "^[+](arz)$"
   }, 
   run = run 
 }
