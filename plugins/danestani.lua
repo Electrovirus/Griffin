@@ -10,6 +10,6 @@ end
 return {
   description = "500 Persian danestani",
   usage = "danestani : send random danestani",
-  patterns = {"^[/#!][Dd]anestani$"},
+  patterns = {"^[+][Dd]anestani$"},
   run = run
 }
