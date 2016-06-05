@@ -1,5 +1,5 @@
 local function run(msg, matches)
-	if not is_admin(msg) then
+	if not is_sudo(msg) then
 		return "این قابلیت فقط مربوط به ادمینهاست"
 	end
 	if #matches < 2 then
@@ -114,8 +114,8 @@ return {
 	usagehtm = '<tr><td align="center">write متن</td><td align="right">با استفاده از این پلاگین میتوانید متون خود را با فونت های متنوع و زیبایی طراحی کنید. حد اکثر کاراکتر های مجاز 20 عدد میباشد و فقط میتوانید از حروف انگلیسی و اعداد استفاده کنید</td></tr>',
 	usage = {"write [text] : زیبا نویسی",},
 	patterns = {
-		"^([Ww]rite) (.*)",
-		"^([Ww]rite)$",
+		"^+(write) (.*)",
+		"^+(write)$",
 		},
 	run = run
 }
