@@ -13,7 +13,7 @@ return {
   description = "Simplest plugin ever!",
   usage = "بگو [whatever]: echoes the msg",
   patterns = {
-    "^[/!#]say(.+)$"
+    "^[+]say(.+)$"
   }, 
   run = run 
 }
