@@ -14,15 +14,12 @@
 do
 
 function run(msg, matches)
-  return 'Televirus v.2 an advanced bot based on DBteam 
-Sudo is @Electrovirus
-
-Our channel is @electrovirus_official.'
+  return 'Griffin V.1 🌎 an advance telegram bot based on tg cli Developed by @Electrovirus My channel: @Ev_official'
 end
 
 return {
   patterns = {
-    "^#version$"
+    "^+version$"
   }, 
   run = run 
 }
