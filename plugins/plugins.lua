@@ -41,7 +41,7 @@ local function list_plugins(only_enabled)
   local psum = 0
   for k, v in pairs( plugins_names( )) do
     --  ⚡ enabled, 🌂 disabled
-    local status = '⚡'
+    local status = '🌂'
     psum = psum+1
     pact = 0
     -- Check if is enabled
