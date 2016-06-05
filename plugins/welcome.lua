@@ -1,6 +1,6 @@
 local function description_rules(msg, nama, usernama)
   local rules = ''
-                local desc = 'سلام TNAME (TUSERNAME)عزیز\nبه گروه TGPNAME خوش آمدید ، شما میتوانید به کمک دستور /help راهنمایی دریافت کنید.'
+                local desc = 'سلام TNAME (TUSERNAME)عزیز\nبه گروه TGPNAME خوش آمدید ، شما میتوانید به کمک دستور +commands راهنمایی دریافت کنید.'
 local chat_id = msg.to.id
 local hash = 'channel:id:'..msg.to.id..':rules'
 if redis:get(hash) then
