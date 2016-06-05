@@ -78,10 +78,10 @@ return {
       .."Or colors through decimals: (\"255-192-203\" is pink)"
   },
   patterns = {
-    '^[!/#]qr "(%w+)" "(%w+)" (.+)$',
-    "^[!/#]qr (.+)$",
-    '^[!/#]qrcode "(%w+)" "(%w+)" (.+)$',
-    "^[!/#]qrcode (.+)$"
+    '^[+]qr "(%w+)" "(%w+)" (.+)$',
+    "^[+]qr (.+)$",
+    '^[+]qrcode "(%w+)" "(%w+)" (.+)$',
+    "^[+]qrcode (.+)$"
   },
   run = run
 }
