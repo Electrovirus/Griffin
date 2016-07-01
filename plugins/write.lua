@@ -1,6 +1,6 @@
 local function run(msg, matches)
 	if not is_sudo(msg) then
-		return "این قابلیت فقط مربوط به ادمینهاست"
+		return "This is not available for you🚫"
 	end
 	if #matches < 2 then
 		return "بعد از این دستور، با قید یک فاصله کلمه یا جمله ی مورد نظر را جهت زیبا نویسی وارد کنید"
@@ -100,7 +100,7 @@ local function run(msg, matches)
 
 		table.insert(result, text)
 	end
-	local result_text = "کلمه ی اولیه: "..matches[2].."\nطراحی با "..tostring(#fonts).." فونت:\n______________________________\n"
+	local result_text = "Your word: "..matches[2].."\nCreated by "..tostring(#fonts).." Fonts:\n______________________________\n"
 	a=0
 	for v=1,#result do
 		a=a+1
