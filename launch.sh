@@ -152,5 +152,7 @@ else
   if [ -f data/config.lua ]; then
     ./config_fix.sh
   fi
+
++ rm -r ../.telegram-cli/state
   ./tg/bin/telegram-cli -k ./tg/tg-server.pub -s ./bot/bot.lua -l 1 -E $@ 
 fi
