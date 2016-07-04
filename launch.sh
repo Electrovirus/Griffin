@@ -140,14 +140,7 @@ else
   chmod 777 start.sh
   chmod 777 config_fix.sh
   
-  #Adding some color. By @iicc1 :D
-   echo -e "\033[38;5;208m"
-   echo -e "      ____  ____ _____                        "
-   echo -e "     |    \|  _ )_   _|___ ____   __  __      "
-   echo -e "     | |_  )  _ \ | |/ .__|  _ \_|  \/  |     "
-   echo -e "     |____/|____/ |_|\____/\_____|_/\/\_|     "
-   echo -e "                                              \033[0;00m"
-   echo -e "\e[36m"
+ 
    
   if [ -f data/config.lua ]; then
     ./config_fix.sh
